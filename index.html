@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Project Instinct">
+  <meta name="keywords" content="Instinct-Level intelligences, Whole-body Control, Deep Learning, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Instinct</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://project-instinct.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Research Projects
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://robot-parkour.github.io">
+            Robot Parkour Learning
+          </a>
+          <a class="navbar-item" href="https://humanoid4parkour.github.io">
+            Humanoid Parkour Learning
+          </a>
+          <a class="navbar-item" href="https://project-instinct.github.io/embrace-collisions">
+            Embrace Collisions
+          </a>
+          <a class="navbar-item" href="https://project-instinct.github.io/deep-whole-body-parkour">
+            Deep Whole-body Parkour
+          </a>
+          <a class="navbar-item" href="https://project-instinct.github.io/hiking-in-the-wild">
+            Hiking in the Wild
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Project Instinct</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://ziwenzhuang.github.io">Ziwen Zhuang</a><sup>1</sup>,</span>
+              <a href="">Shaoting Zhu</a><sup>1</sup>,</span>
+              <a href="">Mengjie Zhao</a><sup>1</sup>,</span>
+              <a href="https://hangzhaomit.github.io">Hang Zhao</a><sup>1</sup>,</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/ziwenzhuang/instinctlab"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>InstinctLab</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/ziwenzhuang/instinct-rl"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Instinct-RL</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/ziwenzhuang/instinct_onboard"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>instinct_onboard</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/project-instinct-teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Instinct-Level intelligences</span> for whole-body control.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="album0" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/distilled-case0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="album1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/distilled-case1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="album2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/distilled-case2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="album3" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/distilled-case3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="album4" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/distilled-case4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="album5" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/distilled-case5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a unified framework from algorithm, environment, dataset curation, and deployment for Instinct-Level intelligence on humanoid robots.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Research Projects</h2>
+        <br>
+        <br>
+        <!-- align text left -->
+        <div class="content has-text-left">
+
+          <h3 class="title is-4"><a href="https://project-instinct.github.io/embrace-collisions">Embrace Collisions: Humanoid Shadowing for Deployable Contact-Agnostics Motions</a>
+          </h3>
+          <div class="is-size-6 publication-venue has-text-left">
+            <div class="is-size-6 publication-authors no-bold has-text-left">
+              <span class="author-block">
+                <a href="https://ziwenzhuang.github.io">Ziwen Zhuang</a><sup>&#8224;</sup>,</span>
+              <span class="author-block">
+                <a href="https://hangzhaomit.github.io">Hang Zhao</a><sup>&#8224;</sup>,</span>
+            </div>
+            <span class="venue-block">Conference on Robot Learning (CoRL) 2025</span> <br>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <div class="column has-text-centered">
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2502.01465" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://youtu.be/YbHLuIssktc" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>YouTube</span>
+                  </a>
+                </span>
+                <!-- Bilibili Link. -->
+                <span class="link-block">
+                  <a href="https://www.bilibili.com/video/BV1UFPReKEhj" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <svg style="color: white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M488.6 104.1C505.3 122.2 513 143.8 511.9 169.8V372.2C511.5 398.6 502.7 420.3 485.4 437.3C468.2 454.3 446.3 463.2 419.9 464H92.02C65.57 463.2 43.81 454.2 26.74 436.8C9.682 419.4 .7667 396.5 0 368.2V169.8C.7667 143.8 9.682 122.2 26.74 104.1C43.81 87.75 65.57 78.77 92.02 78H121.4L96.05 52.19C90.3 46.46 87.42 39.19 87.42 30.4C87.42 21.6 90.3 14.34 96.05 8.603C101.8 2.868 109.1 0 117.9 0C126.7 0 134 2.868 139.8 8.603L213.1 78H301.1L375.6 8.603C381.7 2.868 389.2 0 398 0C406.8 0 414.1 2.868 419.9 8.603C425.6 14.34 428.5 21.6 428.5 30.4C428.5 39.19 425.6 46.46 419.9 52.19L394.6 78L423.9 78C450.3 78.77 471.9 87.75 488.6 104.1H488.6zM449.8 173.8C449.4 164.2 446.1 156.4 439.1 150.3C433.9 144.2 425.1 140.9 416.4 140.5H96.05C86.46 140.9 78.6 144.2 72.47 150.3C66.33 156.4 63.07 164.2 62.69 173.8V368.2C62.69 377.4 65.95 385.2 72.47 391.7C78.99 398.2 86.85 401.5 96.05 401.5H416.4C425.6 401.5 433.4 398.2 439.7 391.7C446 385.2 449.4 377.4 449.8 368.2L449.8 173.8zM185.5 216.5C191.8 222.8 195.2 230.6 195.6 239.7V273C195.2 282.2 191.9 289.9 185.8 296.2C179.6 302.5 171.8 305.7 162.2 305.7C152.6 305.7 144.7 302.5 138.6 296.2C132.5 289.9 129.2 282.2 128.8 273V239.7C129.2 230.6 132.6 222.8 138.9 216.5C145.2 210.2 152.1 206.9 162.2 206.5C171.4 206.9 179.2 210.2 185.5 216.5H185.5zM377 216.5C383.3 222.8 386.7 230.6 387.1 239.7V273C386.7 282.2 383.4 289.9 377.3 296.2C371.2 302.5 363.3 305.7 353.7 305.7C344.1 305.7 336.3 302.5 330.1 296.2C323.1 289.9 320.7 282.2 320.4 273V239.7C320.7 230.6 324.1 222.8 330.4 216.5C336.7 210.2 344.5 206.9 353.7 206.5C362.9 206.9 370.7 210.2 377 216.5H377z" fill="white"></path>
+                      </svg>
+                    </span>
+                    <span>Bilibili</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Auto position-correction from depth sensing</h2>
+    <div class="columns is-centered is-multiline">
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="convergence-kneelClimbStep" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/convergence-kneelClimbStep.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="convergence-diveRoll" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/convergence-diveRoll.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="convergence-jumpSit" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/convergence-jumpSit.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="convergence-rollVault" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/convergence-rollVault.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Downstream usecase: Distill from tracking policies</h2>
+    <div class="columns is-centered is-multiline">
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="distilled-case0" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/distilled-case0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="distilled-case1" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/distilled-case1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="distilled-case2" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/distilled-case2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="distilled-case3" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/distilled-case3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="distilled-case4" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/distilled-case4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column is-6-tablet is-12-mobile">
+        <div class="content">
+          <video id="distilled-case5" autoplay muted loop controls playsinline height="100%">
+            <source src="./static/videos/distilled-case5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/project-instinct/project-instinct.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
